@@ -1,13 +1,60 @@
-import React from 'react';
-
+import React, {useState} from 'react';
 import './App.css';
+import ChildButtons from './ChildButtons';
 
-function App() {
-  return (
-    <div className="App">
-      
-    </div>
-  );
+// newer version using Hooks for state
+// see: https://reactjs.org/docs/hooks-state.html
+
+// function App() {
+//   const [count, setCount] = useState(0);
+//   return (
+//     <div>
+//       The count is {count}
+//       <div>
+//          <ChildButtons 
+//            onClick={setCount} 
+//            count={count} 
+//          />
+//       </div>
+//     </div>
+//   );
+// }
+
+
+// my old skool way
+
+class App extends React.Component {
+
+  constructor(props) {
+    super(props)
+    this.state = {
+      count: 0,
+    }
+  }
+
+  setCount = (count) => {
+    this.setState({
+      count
+    })
+  }
+
+  render() {
+    const { count } = this.state;
+    return (
+      <div className='App'>
+        The count is {count}
+        <div>   
+          <ChildButtons 
+            // method 1
+            // onClick={(count) => {this.setCount(count)}} 
+            // method 2 (^^^ why the tendency to use method 1?)
+            onClick={this.setCount} 
+            count={count} 
+          />
+        </div>
+      </div>
+    )
+  }
 }
 
 export default App;
