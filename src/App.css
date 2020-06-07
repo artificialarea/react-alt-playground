@@ -1,7 +1,8 @@
-.App {
+.UberApp {
   text-align: center;
 }
 
-.App div {
+.UberApp > div {
+  border-bottom: 1px dotted black;
   padding: 10px;
 }

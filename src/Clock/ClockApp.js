@@ -1,6 +1,7 @@
 import React from 'react';
 
-export default class Clock extends React.Component {
+
+export default class ClockApp extends React.Component {
 
   constructor(props) {
     super(props)
@@ -37,7 +38,7 @@ export default class Clock extends React.Component {
   }
 }
 
-// export default function Clock(props) {
+// export default function ClockApp(props) {
 //   return (
 //     <div>
 //       <h1>Hello, world!</h1>
