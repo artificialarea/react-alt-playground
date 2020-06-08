@@ -11,9 +11,3 @@ export default function NumberList(props) {
     <ul>{listItems}</ul>
   )
 }
-
-// const numbers =[1, 2, 3, 4, 5];
-// ReactDOM.render(
-//   <NumberList numbers={numbers} />,
-//   document.getElementById('root')
-// );
