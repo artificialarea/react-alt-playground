@@ -1,5 +1,7 @@
 import React from 'react';
 import uuid from 'react-uuid'; // NOTE: using react-uuid to generate 128bit Universal Unique Identifier (UUID) !!! =D
+// BUT IS IT WORKING????
+// esLint: "Could not find a declaration file for module 'react-uuid'""
 
 
 export default function NumberList(props) {

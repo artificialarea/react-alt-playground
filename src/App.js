@@ -1,9 +1,9 @@
 import React from 'react';
 import './App.css';
-import CounterApp from './Counter/CounterApp'
+import CounterApp from './Counter/CounterApp';
 import ClockApp from './Clock/ClockApp';
-import NumberListApp from './NumberList/NumberListApp'
-
+import NumberListApp from './NumberList/NumberListApp';
+import LiftingStateUpApp from './LiftingStateUp/LiftingStateUpApp';
 
 class App extends React.Component {
 
@@ -14,6 +14,10 @@ class App extends React.Component {
     
     return (
       <div className='UberApp'>
+
+        <div className="LiftingStateUpApp">
+          <LiftingStateUpApp />
+        </div>
 
         <div className="NumberListApp">
           <NumberListApp numbers={numbers} />
